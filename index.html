@@ -4,77 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sachin Monga</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #fbf7f1;
+      --text: #1a1814;
+      --muted: #6f685e;
+      --rule: #d9d2c6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16140f;
+        --text: #ebe6dc;
+        --muted: #9a9286;
+        --rule: #38342c;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'DM Mono', ui-monospace, monospace;
+      font-size: 14px;
+      line-height: 1.7;
       margin: 0;
-      padding: 40px;
-      background-color: #ffffff;
-      color: #111111;
-      line-height: 1.5;
-      display: flex;
-      justify-content: center;
+      padding: 14vh 24px 80px;
+      background-color: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 600px;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
     h1 {
-      font-size: 32px;
-      font-weight: 600;
-      margin-bottom: 32px;
-    }
-
-    h2 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-top: 32px;
-      margin-bottom: 16px;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin: 0 0 19px;
+      padding-top: 28px;
+      border-top: 1px solid var(--text);
     }
 
     p {
-      font-size: 16px;
-      font-weight: 400;
-      margin: 0 0 16px 0;
+      margin: 0 0 1.4em;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 12px 0 32px;
     }
 
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    ul li a {
-      color: #111111;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    ul li a:hover {
+    a {
+      color: inherit;
       text-decoration: underline;
+      text-decoration-color: var(--rule);
+      text-underline-offset: 3px;
     }
 
-    @media (max-width: 768px) {
+    a:hover {
+      text-decoration-color: currentColor;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: 500;
+      margin: 0 0 12px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    @media (max-width: 480px) {
       body {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      h2 {
-        font-size: 16px;
-      }
-
-      p, ul li a {
-        font-size: 14px;
+        font-size: 13px;
+        padding-top: 48px;
       }
     }
   </style>
@@ -82,22 +100,32 @@
 <body>
   <div class="container">
     <h1>Sachin Monga</h1>
-    
+
     <p>
-      People underestimate social technology because it mostly looks trivial on the surface—apps, feeds, “content”. But we are experiencing a historic, one-time event: the wiring of humanity into a single connected consciousness. The tools we use to talk and share, and the spaces we inhabit online, are now the primary vectors for knowledge generation, culture creation, and building relationships. We get one shot at laying out the foundation for this new nervous system.
-    </p>
-    
-    <p>
-      I have been helping build Substack since 2021, where our mission is to build a new economic engine for culture. In 2019, I co-founded Cocoon—an attempt to build a digital home base for long-distance families. I started my career at Facebook in 2011.
+      Next to other technologies, social networks can look trivial. Feeds, memes, &ldquo;content,&rdquo; the viral app du jour. But we&rsquo;re in the middle of a historic event: the wiring of all of humanity into one connected whole, and we only get one shot at laying out the foundation.
     </p>
 
-    <h2>Links</h2>
     <p>
-      <a href="https://substack.com/@sachinmonga" target="_blank">Substack</a><br>
-      <a href="https://twitter.com/@sachinmonga" target="_blank">Twitter</a><br>
-      <a href="https://instagram.com/sachinmonga" target="_blank">Instagram</a><br>
-      <a href="https://www.linkedin.com/in/sachinmonga/" target="_blank">LinkedIn</a><br>
+      We&rsquo;ve been through something like this once before. When people first moved into cities en masse, it took decades to learn to live with our newfound proximity, and to build the infrastructure and social norms we now rely on to coexist.
     </p>
+
+    <p>
+      The online tools we use to talk and share, and the digital spaces where we spend our time, are now increasingly where culture gets made, knowledge gets generated, and relationships get built. And we&rsquo;re still in the early days of figuring it all out.
+    </p>
+
+    <p>
+      Getting to participate in the buildout is a privilege, and the focus of my work. I started my career at Facebook, then co-founded Cocoon and joined Substack through its acquisition in 2021, where I led product, design, and data. As of 2026, I&rsquo;m exploring a new idea with a small and talented team.
+    </p>
+
+    <hr>
+
+    <h2>Links</h2>
+    <div class="links">
+      <a href="https://substack.com/@sachinmonga" target="_blank" rel="noopener">Substack</a>
+      <a href="https://twitter.com/sachinmonga" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://instagram.com/sachinmonga" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/sachinmonga/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
   </div>
 </body>
 </html>
